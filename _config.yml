@@ -1,6 +1,5 @@
 theme: jekyll-theme-cayman
-title: The aesthetic of generative coding
-# description: Winter 2019
+title: Creative coding with unity
 show_downloads: "true"
 plugins:
   - jemoji
