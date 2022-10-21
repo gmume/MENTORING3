@@ -1,6 +1,7 @@
 # theme: jekyll-theme-cayman
 remote_theme: pages-themes/leap-day@v0.2.0
-title: Creative coding with unity
+title: MENTORING3
+description: Creative coding with unity
 show_downloads: "true"
 plugins:
   - jemoji
