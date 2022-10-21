@@ -4,3 +4,4 @@ title: Creative coding with unity
 show_downloads: "true"
 plugins:
   - jemoji
+  - jekyll-remote-theme
