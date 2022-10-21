@@ -1,4 +1,5 @@
-theme: jekyll-theme-cayman
+# theme: jekyll-theme-cayman
+remote_theme: just-the-docs/just-the-docs
 title: Creative coding with unity
 show_downloads: "true"
 plugins:
