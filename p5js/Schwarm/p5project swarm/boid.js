@@ -4,9 +4,9 @@ class Boid {
     this.velocity = p5.Vector.random2D();
     this.velocity.setMag(random(2, 4));
     this.acceleration = createVector();
-    this.maxForce = initalmaxForce; //Controls, how fast they align.
-    this.maxSpeed = initalSpeed;
-    this.boidsView = initalBoidsView; //perseption
+    this.maxForce = initialmaxForce; //Controls, how fast they align.
+    this.maxSpeed = initialSpeed;
+    this.boidsView = initialBoidsView; //perseption
   }
 
   //donut world

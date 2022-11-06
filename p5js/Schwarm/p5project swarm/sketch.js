@@ -1,7 +1,7 @@
 const flock = [];
-const initalmaxForce = 1;
-const initalSpeed = 4;
-const initalBoidsView = 50;
+const initialmaxForce = 1;
+const initialSpeed = 4;
+const initialBoidsView = 50;
 
 let maxForceSlider,
   maxSpeedSlider,
