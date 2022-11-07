@@ -5,31 +5,32 @@ using UnityEngine;
 public class Flock : MonoBehaviour
 {
     // Reference to the Prefab. Drag a Prefab into this field in the Inspector.
-    public GameObject boidPrefab;
+    public GameObject boidPrefab; //Not instantiated yet!!!
     public int numberOfBoids = 30;
+    public int initMaxForce = 1;
+    public int initMaxSpeed = 4;
+    public int initBoidsView = 50;
     private readonly Boid[] flock;
 
     // Start is called before the first frame update
     void Start()
     {
-        // Instantiate prefab.
         for (int i = 0; i < numberOfBoids; i++)
         {
-            //Quaternion rotation = Quaternion.identity;
-            //rotation.eulerAngles = new Vector3(Random.Range(-20.0f, 20.0f), Random.Range(-20.0f, 20.0f), Random.Range(-20.0f, 20.0f));
-
-            //Instantiate(boidPrefab, new Vector3(Random.Range(-20.0f, 20.0f), Random.Range(-20.0f, 20.0f), Random.Range(-20.0f, 20.0f)), rotation);
-
-            flock[i] = new Boid();
+            Boid boid = new();
+            boid.Setup(boidPrefab, initMaxForce, initMaxSpeed, initBoidsView);
+            flock[i] = boid;
         }
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        foreach (Boid boid in this.flock)
+        {
+            boid.Edges();
+            boid.Flock(this.flock);
+            boid.UpdateBoid();
+        }
     }
-
-
 }
