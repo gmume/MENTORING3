@@ -1,24 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class Flock : MonoBehaviour
 {
     // Reference to the Prefab. Drag a Prefab into this field in the Inspector.
-    public GameObject boidPrefab; //Not instantiated yet!!!
     public int numberOfBoids = 30;
     public int initMaxForce = 1;
     public int initMaxSpeed = 4;
     public int initBoidsView = 50;
-    private readonly Boid[] flock;
+    public GameObject boidPrefab;
+    public Boid[] flock;
 
     // Start is called before the first frame update
     void Start()
     {
+        flock = new Boid[numberOfBoids];
         for (int i = 0; i < numberOfBoids; i++)
         {
-            Boid boid = new();
+            Boid boid = gameObject.AddComponent(typeof(Boid)) as Boid;
             boid.Setup(boidPrefab, initMaxForce, initMaxSpeed, initBoidsView);
+            //Debug.Log("boid: "+boid);
             flock[i] = boid;
         }
     }
@@ -26,10 +27,11 @@ public class Flock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach (Boid boid in this.flock)
+        foreach (Boid boid in flock)
         {
             boid.Edges();
-            boid.Flock(this.flock);
+            boid.Edges();
+            boid.Flock(flock);
             boid.UpdateBoid();
         }
     }

@@ -23,7 +23,7 @@ public class Boid : MonoBehaviour
         maxForce = initialMaxForce;
         maxSpeed = initialMaxSpeed;
         boidsView = initialBoidsView;
-        Instantiate(boidPrefab, position, Quaternion.identity);
+        Instantiate(this.boidPrefab, position, Quaternion.identity);
     }
 
     //Donut world
