@@ -9,7 +9,7 @@ public class Flock : MonoBehaviour
     public int initMaxSpeed = 4;
     public int initBoidsView = 50;
     public GameObject boidPrefab;
-    public Boid[] flock;
+    private Boid[] flock;
 
     // Start is called before the first frame update
     void Start()
@@ -17,10 +17,12 @@ public class Flock : MonoBehaviour
         flock = new Boid[numberOfBoids];
         for (int i = 0; i < numberOfBoids; i++)
         {
-            Boid boid = gameObject.AddComponent(typeof(Boid)) as Boid;
-            boid.Setup(boidPrefab, initMaxForce, initMaxSpeed, initBoidsView);
+            Vector3 position = MathUtilities.Random(new Vector3(-40f, 40f, 40f), new Vector3(-40f, 40f, 40f));
+            GameObject boid = Instantiate(boidPrefab, position, Quaternion.identity);
+            Boid boidScript = boid.AddComponent(typeof(Boid)) as Boid;
+            boidScript.Setup(initMaxForce, initMaxSpeed, initBoidsView);
             //Debug.Log("boid: "+boid);
-            flock[i] = boid;
+            flock[i] = boidScript;
         }
     }
 

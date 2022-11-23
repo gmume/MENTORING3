@@ -5,25 +5,27 @@ using UnityEngine;
 //Doesn't have a Prefab yet.
 public class Boid : MonoBehaviour
 {
-    private GameObject boidPrefab;
     private Vector3 position = new();
     private Quaternion rotation = Quaternion.identity;
-    private Vector3 velocity = MathUtilities.Random(new Vector3(-40f, 40f, 40f), new Vector3(-40f, 40f, 40f));
-    private Vector3 acceleration = MathUtilities.Random(new Vector3(-40f, 40f, 40f), new Vector3(-40f, 40f, 40f));
+    private Vector3 velocity;
+    private Vector3 acceleration;
     private int maxForce; //Controls, how fast they align.
     private int maxSpeed;
     private int boidsView; //perseption
 
     // Start is called before the first frame update
-    public void Setup(GameObject boidPrefab, int initialMaxForce, int initialMaxSpeed, int initialBoidsView)
+    public void Start()
     {
-        this.boidPrefab = boidPrefab;
-        position = MathUtilities.Random(new Vector3(-40f, 40f, 40f), new Vector3(-40f, 40f, 40f));
+        velocity = MathUtilities.Random(new Vector3(-40f, 40f, 40f), new Vector3(-40f, 40f, 40f));
+        acceleration = MathUtilities.Random(new Vector3(-40f, 40f, 40f), new Vector3(-40f, 40f, 40f));
+    }
+
+    public void Setup(int initialMaxForce, int initialMaxSpeed, int initialBoidsView)
+    {
         rotation.eulerAngles = MathUtilities.Random(new Vector3(-40f, 40f, 40f), new Vector3(-40f, 40f, 40f));
         maxForce = initialMaxForce;
         maxSpeed = initialMaxSpeed;
         boidsView = initialBoidsView;
-        Instantiate(this.boidPrefab, position, Quaternion.identity);
     }
 
     //Donut world
