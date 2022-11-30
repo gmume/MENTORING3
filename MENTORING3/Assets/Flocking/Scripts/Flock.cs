@@ -4,10 +4,10 @@ using UnityEngine;
 public class Flock : MonoBehaviour
 {
     // Reference to the Prefab. Drag a Prefab into this field in the Inspector.
-    public int numberOfBoids = 30;
-    public int initMaxForce = 1;
-    public int initMaxSpeed = 4;
-    public int initBoidsView = 50;
+    public int numberOfBoids;
+    public float initMaxForce;
+    public float initMaxSpeed;
+    public int initBoidsView;
     public GameObject boidPrefab;
     private Boid[] flock;
 
@@ -17,11 +17,10 @@ public class Flock : MonoBehaviour
         flock = new Boid[numberOfBoids];
         for (int i = 0; i < numberOfBoids; i++)
         {
-            Vector3 position = MathUtilities.Random(new Vector3(-40f, 40f, 40f), new Vector3(-40f, 40f, 40f));
+            Vector3 position = MathUtilities.Random(new Vector3(-5f, 5f, 5f), new Vector3(-5f, 5f, 5f));
             GameObject boid = Instantiate(boidPrefab, position, Quaternion.identity);
             Boid boidScript = boid.AddComponent(typeof(Boid)) as Boid;
-            boidScript.Setup(initMaxForce, initMaxSpeed, initBoidsView);
-            //Debug.Log("boid: "+boid);
+            boidScript.Setup(initMaxForce, initMaxSpeed, initBoidsView, boid);
             flock[i] = boidScript;
         }
     }
@@ -31,7 +30,6 @@ public class Flock : MonoBehaviour
     {
         foreach (Boid boid in flock)
         {
-            boid.Edges();
             boid.Edges();
             boid.Flock(flock);
             boid.UpdateBoid();

@@ -9,58 +9,70 @@ public class Boid : MonoBehaviour
     private Quaternion rotation = Quaternion.identity;
     private Vector3 velocity;
     private Vector3 acceleration;
-    private int maxForce; //Controls, how fast they align.
-    private int maxSpeed;
+    private float maxForce; //Controls, how fast they align.
+    private float maxSpeed;
     private int boidsView; //perseption
+    private GameObject boidRef;
 
     // Start is called before the first frame update
     public void Start()
     {
-        velocity = MathUtilities.Random(new Vector3(-40f, 40f, 40f), new Vector3(-40f, 40f, 40f));
-        acceleration = MathUtilities.Random(new Vector3(-40f, 40f, 40f), new Vector3(-40f, 40f, 40f));
+        velocity = MathUtilities.Random(new Vector3(-1.1f, 1.1f, 1.1f), new Vector3(-1.1f, 1.1f, 1.1f));
+        acceleration = MathUtilities.Random(new Vector3(-1.1f, 1.1f, 1.1f), new Vector3(-1.1f, 1.1f, 1.1f));
     }
 
-    public void Setup(int initialMaxForce, int initialMaxSpeed, int initialBoidsView)
+    public void Setup(float initialMaxForce, float initialMaxSpeed, int initialBoidsView, GameObject boid)
     {
-        rotation.eulerAngles = MathUtilities.Random(new Vector3(-40f, 40f, 40f), new Vector3(-40f, 40f, 40f));
+        rotation.eulerAngles = MathUtilities.Random(new Vector3(-5f, 5f, 5f), new Vector3(-5f, 5f, 5f));
         maxForce = initialMaxForce;
         maxSpeed = initialMaxSpeed;
         boidsView = initialBoidsView;
+        boidRef = boid;
+        boidRef.transform.Translate(position);
+
+        //Debugging!!!
+        //Component[] components = boidRef.GetComponents(typeof(Component));
+        //foreach (Component component in components)
+        //{
+        //    Debug.Log("Component: "+component.ToString());
+        //}
     }
 
     //Donut world
     public void Edges()
     {
-        if (position.x > 300)
+        //Debug.Log("entred Edges");
+        if (position.x > 5)
         {
             position.x = 0;
         }
         else if (position.x < 0)
         {
-            position.x = 300;
+            position.x = 5;
         }
 
-        if (position.y > 300)
+        if (position.y > 5)
         {
             position.y = 0;
         }
         else if (position.y < 0)
         {
-            position.y = 300;
+            position.y = 5;
         }
 
-        if (position.y > 300)
+        if (position.y > 5)
         {
             position.y = 0;
         }
         else if (position.y < 0)
         {
-            position.y = 300;
+            position.y = 5;
         }
     }
 
     Vector3 Align(Boid[] flock)
     {
+        //Debug.Log("entred Align");
         Vector3 steering = new(); //Vector (force) to correct the direction
         int total = 0;
 
@@ -86,6 +98,7 @@ public class Boid : MonoBehaviour
 
     Vector3 Cohesion(Boid[] flock)
     {
+        //Debug.Log("entred Cohesion");
         Vector3 steering = new();
         int total = 0;
 
@@ -112,6 +125,7 @@ public class Boid : MonoBehaviour
 
     Vector3 Separation(Boid[] flock)
     {
+        //Debug.Log("entred Separation");
         Vector3 steering = new();
         int total = 0;
 
@@ -140,6 +154,7 @@ public class Boid : MonoBehaviour
     //Apply rules
     public void Flock(Boid[] flock)
     {
+        //Debug.Log("entred Flock");
         Vector3 alignment = Align(flock);
         Vector3 cohesion = Cohesion(flock);
         Vector3 separation = Separation(flock);
@@ -151,6 +166,8 @@ public class Boid : MonoBehaviour
 
     public void UpdateBoid()
     {
+        //Debug.Log("entred UpdateBoid");
+        boidRef.transform.Translate(position);
         position += velocity;
         velocity += acceleration;
         velocity = Vector3.ClampMagnitude(velocity, maxSpeed);
