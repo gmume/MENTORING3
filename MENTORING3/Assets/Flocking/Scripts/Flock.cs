@@ -10,6 +10,8 @@ public class Flock : MonoBehaviour
     public int initBoidsView;
     public GameObject boidPrefab;
     private Boid[] flock;
+    private  float interval = 0.03f;
+    private float nextUpdate = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -28,11 +30,16 @@ public class Flock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach (Boid boid in flock)
+        if (Time.time >= nextUpdate)
         {
-            boid.Edges();
-            boid.Flock(flock);
-            boid.UpdateBoid();
+            //Debug.Log("TimeElapsed: "+TimeElapsed);
+            foreach (Boid boid in flock)
+            {
+                boid.Edges();
+                boid.Flock(flock);
+                boid.UpdateBoid();
+            }
+            nextUpdate += interval;
         }
     }
 }
