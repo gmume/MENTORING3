@@ -5,7 +5,7 @@ using UnityEngine;
 public class Flock : MonoBehaviour
 {
     public FlockAgent agentPrefab;
-    List<FlockAgent> agents = new List<FlockAgent>();
+    List<FlockAgent> agents = new();
     public FlockBehavior behavior;
 
     [Range(10, 500)]
@@ -69,7 +69,7 @@ public class Flock : MonoBehaviour
 
     List<Transform> GetNearbyObjects(FlockAgent agent)
     {
-        List<Transform> context = new List<Transform>();
+        List<Transform> context = new();
         Collider[] contextColliders = Physics.OverlapSphere(agent.transform.position, neightborRadius);
         foreach(Collider c in contextColliders)
         {

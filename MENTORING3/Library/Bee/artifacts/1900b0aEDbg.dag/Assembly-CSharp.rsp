@@ -362,6 +362,7 @@
 "Assets/FLOCK2/Scripts/BehaviorScripts/SteeredCohesionBehavior.cs"
 "Assets/FLOCK2/Scripts/ContextFilter.cs"
 "Assets/FLOCK2/Scripts/FilteredFlockBehavior.cs"
+"Assets/FLOCK2/Scripts/FilterScripts/PhysicsLayerFilter.cs"
 "Assets/FLOCK2/Scripts/FilterScripts/SameFlockFilter.cs"
 "Assets/FLOCK2/Scripts/Flock.cs"
 "Assets/FLOCK2/Scripts/FlockAgent.cs"
