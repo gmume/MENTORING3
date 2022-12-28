@@ -7,7 +7,7 @@ using UnityEngine;
 public class AvoidanceBehavior : FilteredFlockBehavior
 {
     //move away from your neighbors
-    public override Vector3 CalculateMove(FlockAgent agent, List<Transform> context, Flock flock)
+    public override Vector3 CalculateMove(Boid boid, List<Transform> context, Flock flock)
     {
         //if no neighbors, return no adjustment
         if (context.Count == 0)
@@ -16,14 +16,14 @@ public class AvoidanceBehavior : FilteredFlockBehavior
         //add all points together and average
         Vector3 avoidanceMove = Vector3.zero;
         int nAvoid = 0;
-        List<Transform> filteredContext = (filter == null) ? context : filter.Filter(agent, context);
+        List<Transform> filteredContext = (filter == null) ? context : filter.Filter(boid, context);
         foreach (Transform item in filteredContext)
         {
-            Vector3 closestPoint = item.gameObject.GetComponent<Collider>().ClosestPoint(agent.transform.position);
-            if (Vector3.SqrMagnitude(closestPoint - agent.transform.position) < flock.SquareAvoidanceRadius)
+            Vector3 closestPoint = item.gameObject.GetComponent<Collider>().ClosestPoint(boid.transform.position);
+            if (Vector3.SqrMagnitude(closestPoint - boid.transform.position) < flock.SquareAvoidanceRadius)
             {
                 nAvoid++;
-                avoidanceMove += agent.transform.position - closestPoint;
+                avoidanceMove += boid.transform.position - closestPoint;
             }
         }
         if(nAvoid > 0)

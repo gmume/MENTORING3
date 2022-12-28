@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Flock : MonoBehaviour
 {
-    public FlockAgent agentPrefab;
-    List<FlockAgent> agents = new();
+    public Boid boidPrefab;
+    List<Boid> boids = new();
     public FlockBehavior behavior;
 
     [Range(10, 500)]
     public int startingCount = 250;
-    const float AgentDensity = 0.08f;
+    const float BoidDensity = 0.08f;
 
     [Range(1f, 100f)]
     public float driveFactor = 10f;
@@ -35,45 +35,45 @@ public class Flock : MonoBehaviour
 
         for (int i = 0; i < startingCount; i++)
         {
-            FlockAgent newAgent = Instantiate(
-                agentPrefab,
-                Random.insideUnitCircle * startingCount * AgentDensity,
+            Boid newBoid = Instantiate(
+                boidPrefab,
+                Random.insideUnitCircle * startingCount * BoidDensity,
                 Quaternion.Euler(Vector3.forward * Random.Range(0f, 360f)),
                 transform
                 );
-            newAgent.name = "Agent " + i;
-            newAgent.Initialize(this); //tell agent, that it's part of this flock
-            agents.Add(newAgent);
+            newBoid.name = "Boid " + i;
+            newBoid.Initialize(this); //tell boid, that it's part of this flock
+            boids.Add(newBoid);
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        foreach (FlockAgent agent in agents)
+        foreach (Boid boid in boids)
         {
-            List<Transform> context = GetNearbyObjects(agent);
+            List<Transform> context = GetNearbyObjects(boid);
 
             //FOR DEMO ONLY
-            //agent.GetComponentInChildren<Renderer>().material.color = Color.Lerp(Color.white, Color.red, context.Count / 6f);
+            //boid.GetComponentInChildren<Renderer>().material.color = Color.Lerp(Color.white, Color.red, context.Count / 6f);
 
-            Vector3 move = behavior.CalculateMove(agent, context, this);
+            Vector3 move = behavior.CalculateMove(boid, context, this);
             move *= driveFactor;
             if (move.sqrMagnitude > squareMaxSpeed)
             {
                 move = move.normalized * maxSpeed;
             }
-            agent.Move(move);
+            boid.Move(move);
         }
     }
 
-    List<Transform> GetNearbyObjects(FlockAgent agent)
+    List<Transform> GetNearbyObjects(Boid boid)
     {
         List<Transform> context = new();
-        Collider[] contextColliders = Physics.OverlapSphere(agent.transform.position, neightborRadius);
+        Collider[] contextColliders = Physics.OverlapSphere(boid.transform.position, neightborRadius);
         foreach(Collider c in contextColliders)
         {
-            if(c !=agent.AgentCollider)
+            if(c !=boid.BoidCollider)
             {
                 context.Add(c.transform);
             }
