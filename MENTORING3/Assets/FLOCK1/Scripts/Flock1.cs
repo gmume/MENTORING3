@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class Flock11 : MonoBehaviour
+public class Flock1 : MonoBehaviour
 {
     // Reference to the Prefab. Drag a Prefab into this field in the Inspector.
     public int numberOfBoid1s;

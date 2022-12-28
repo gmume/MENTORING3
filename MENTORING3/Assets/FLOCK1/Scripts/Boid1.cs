@@ -36,6 +36,7 @@ public class Boid1 : MonoBehaviour
         //Debugging!!!
         //Component[] components = boidRef.GetComponents(typeof(Component));
         //foreach (Component component in components)
+
         //{
         //    Debug.Log("Component: "+component.ToString());
         //}
