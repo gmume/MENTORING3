@@ -22,3 +22,7 @@ After a good talk with Dragica Kahlina, a lecturer at the HSLU, I decided to cha
 Because I don't really know how Unity works and I can't programm in C# I thought, it would be good to first write a little prototype in p5.js. To begin with it, I took the example from Daniel Shiffman from The Coding Train in his Coding challenge #124: Flocking Simulation.  
 [Coding Challange #124: Flocking Simulation](https://www.youtube.com/watch?v=mhjuuHl6qHM)
 
+My attempt:
+{% raw %}
+
+<iframe src="content\day07\faces_v7_3D\index.html" width="100%" height="450" frameborder="no"></iframe> {% endraw %} [Full screen](content/day07/faces_v7_3D)
