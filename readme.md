@@ -42,15 +42,17 @@ Now I felt, I was ready to tackle Unity. But my feeling was terribly wrong! I ha
 
 #### December
 ### New attempt with scriptable objects
-Because of too many problems that weren't solvable for me, I decided no to try to implement a p5.js code in Unity anymore. So I searched for a better idea and found one. In the tutorial from Board To Bits Games Ben shows, how a flock can be realized in an modular way in Unity. Therefore he uses scriptable objects. I heard of them bevore and was happy to give these a shot. The tutorial project is build in 2D, but I wanted to do it in 3D, so I had to do minor editing.  
+Because of too many problems that weren't solvable for me, I decided not to try to implement a p5.js code in Unity anymore. So I searched for a better idea and found one. In the tutorial from Board To Bits Games Ben shows, how a flock can be realized in a modular way in Unity. Therefore he uses scriptable objects. I heard of them before and was happy to give these a shot. The tutorial project is build in 2D, but I wanted to do it in 3D, so I had to do minor editing.  
 
 ### Creating Boids
-To create the flock I wrote a class Boid that takes a vector to move to the next position. In the Flock class are all the boids handled and every element of the boids behavior will inherit from the scriptable object FlockBehavior.  
+To create the flock I wrote a class Boid that takes a vector to move to the next position. In the class Flock are all the boids handled and every element of the boids behavior will inherit from the scriptable object FlockBehavior.  
 
 public abstract class FlockBehavior : ScriptableObject  
 {  
-    public abstract Vector3 CalculateMove(Boid boid, List<Transform> context, Flock flock); //context means other Boids or obstacles  
+public abstract Vector3 CalculateMove(Boid boid, List<Transform> context, Flock flock);
 }  
 
 When implementing the three rules of a flock every boid has to know about its neighbors. Therefore the Flock class submits a list of nearby neightbor transforms to the Boid. As a result we can see, that every boid is aware of its neightbors. In the picture the boids color turns more red the more of them it has.
 ![Keeping track on neighbors](content\FLOCK2\02_KeepingTrackOnNeighbors.png "Keeping track on neighbors")
+
+
