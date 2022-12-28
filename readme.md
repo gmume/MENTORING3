@@ -2,6 +2,8 @@
 
 ## Creative coding with Unity
 
+#### September 2022
+### My first mentoring at the HSLU
 Hi, I'm a student of the HSLU and study IT and Design. On this site I will document the progress of my mentorting in the semester of fall 2022, in which I'm exploring how to use unity for creative or generative coding. In a discussion with my mentor Guillaume Massol I decided on four goals:
 
 1. Get familiar with Unity and Github
@@ -28,12 +30,27 @@ My attempt:
 {% raw %}
 <iframe src="content\FLOCK1\01_Flocking_p5\index.html" width="100%" height="450" frameborder="no"></iframe> {% endraw %} [Full screen](content/FLOCK1/01_Flocking_p5)
 
-As you can see, the balance for the flocking behavior is very fragile.
+As you can see, the balance for the flocking behavior is very fragile. An other issue is, that performance in p5.js for this kind of project is very limited and so i hoped, that Unity would do better.
 
 #### November
 ### Flocking in Unity
-Now I felt, I was ready to tackle Unity. But my feeling was terribly wrong! I had issues over and over. I managed to let the boids (member of a flock) spawn and at least one had a flight course, but there I was stuck.  
+Now I felt, I was ready to tackle Unity. But my feeling was terribly wrong! I had issues over and over. I managed to let the boids (members of a flock) spawn and at least one had a flight course, but there I was stuck.
 
 <video width="480" height="320" controls="controls">
   <source src="content\FLOCK1\02_Flock1.mp4" type="video/mp4">
 </video>
+
+#### December
+### New attempt with scriptable objects
+Because of too many problems that weren't solvable for me, I decided no to try to implement a p5.js code in Unity anymore. So I searched for a better idea and found one. In the tutorial from Board To Bits Games Ben shows, how a flock can be realized in an modular way in Unity. Therefore he uses scriptable objects. I heard of them bevore and was happy to give these a shot. The tutorial project is build in 2D, but I wanted to do it in 3D, so I had to do minor editing.  
+
+### Creating Boids
+To create the flock I wrote a class Boid that takes a vector to move to the next position. In the Flock class are all the boids handled and every element of the boids behavior will inherit from the scriptable object FlockBehavior.  
+
+public abstract class FlockBehavior : ScriptableObject  
+{  
+    public abstract Vector3 CalculateMove(Boid boid, List<Transform> context, Flock flock); //context means other Boids or obstacles  
+}  
+
+When implementing the three rules of a flock every boid has to know about its neighbors. Therefore the Flock class submits a list of nearby neightbor transforms to the Boid. As a result we can see, that every boid is aware of its neightbors. In the picture the boids color turns more red the more of them it has.
+![Keeping track on neighbors](content\FLOCK2\02_KeepingTrackOnNeighbors.png "Keeping track on neighbors")
