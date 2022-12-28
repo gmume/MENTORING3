@@ -26,11 +26,14 @@ Because I don't really know how Unity works and I can't programm in C# I thought
 
 My attempt:
 {% raw %}
-<iframe src="content\FLOCK1\01_Flocking_p5\index.html" width="100%" height="450" frameborder="no"></iframe> {% endraw %} [Full screen](content/FLOCK1/1_Flocking_p5)
+<iframe src="content\FLOCK1\01_Flocking_p5\index.html" width="100%" height="450" frameborder="no"></iframe> {% endraw %} [Full screen](content/FLOCK1/01_Flocking_p5)
 
 As you can see, the balance for the flocking behavior is very fragile.
 
 #### November
 ### Flocking in Unity
 Now I felt, I was ready to tackle Unity. But my feeling was terribly wrong! I had issues over and over. I managed to let the boids (member of a flock) spawn and at least one had a flight course, but there I was stuck.  
-{% video content\FLOCK1\02_Flock1.mp4 width height content\FLOCK1\02_Flock1_Thumbnail.png %}
+
+<video width="480" height="320" controls="controls">
+  <source src="content\FLOCK1\02_Flock1.mp4" type="video/mp4">
+</video>
