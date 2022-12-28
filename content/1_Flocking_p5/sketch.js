@@ -14,7 +14,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(1000, windowWidth);
+  createCanvas(window.innerWidth, window.innerHeight);
   maxForceSlider = createSlider(1, 5, 1, 0.05);
   maxForceSlider.position(5, 40);
   maxSpeedSlider = createSlider(1, 5, 4, 0.05);
