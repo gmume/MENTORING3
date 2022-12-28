@@ -33,4 +33,4 @@ As you can see, the balance for the flocking behavior is very fragile.
 #### November
 ### Flocking in Unity
 Now I felt, I was ready to tackle Unity. But my feeling was terribly wrong! I had issues over and over. I managed to let the boids (member of a flock) spawn and at least one had a flight course, but there I was stuck.  
-![](/assets/images/san-juan-mountains.jpg "San Juan Mountains")
+
