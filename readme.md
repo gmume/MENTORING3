@@ -76,7 +76,7 @@ When all rules are applied we allrady have some kind of flock.</p>
 
 ### Custom editor
 To be able to combine all elements of a boids behavior as simple as possible, I needed to write a custom editor for the inspector in Unity. Luckily the tutorial of Boards To Bits Games provided a video of how to do that. Unlucky was, that it doesn't work anymore on the newest versions of Unity. So I had to find a work around. In the end it looks like this:
-![Custom editor](content\FLOCK2\06_a_CustomEditor.png "Custom editor")
+![Custom editor](content\FLOCK2\06_a_CustomEditor.png "Custom editor")  
 Now it is easy to just add new elements to the flock create diffrent customized behaviors.
 
 ### More than one flock
@@ -100,11 +100,11 @@ After taking care that the boids fly head first, I was quite happy with the resu
 ### In the game
 Now I just needed to put a flock into the level of a game. But as always it isn't as easy as thought. I found, that the birds didn't spawned, where i wanted them to be.
 <video width="480" height="320" controls="controls">
-  <p>Where are they? – There are they!</p>
   <source src="content\FLOCK2\12_SpawnPosition.mp4" type="video/mp4">
+  <p>Where are they? – There are they!</p>
 </video>
 
 <video width="480" height="320" controls="controls">
-<p>Finally I was able to let them spawn where they should. Looks cool, doesn't it?</p>
   <source src="content\FLOCK2\13_FlockInGame.mp4" type="video/mp4">
+  <p>Finally I was able to let them spawn where they should. Looks cool, doesn't it?</p>
 </video>
