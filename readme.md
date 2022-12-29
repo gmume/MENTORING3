@@ -93,5 +93,4 @@ In a game level you usually want, that a flock doesn't fly right throu trees or 
 
 ### Flock
 After taking care that the boids fly head first, I was quite happy with the result. There are still some issues like boids trembling when they adjust their way or boids passing through objects, when they haven't enough space to avoid them because of their neighbors. But I think all over it works pretty well.
-{% raw %}
-<iframe src="content\FLOCK2\11_Flock2Build\MENTORING3.exe" width="100%" height="450" frameborder="no"></iframe> {% endraw %} [Full screen](content/FLOCK1/01_Flocking_p5)
+
