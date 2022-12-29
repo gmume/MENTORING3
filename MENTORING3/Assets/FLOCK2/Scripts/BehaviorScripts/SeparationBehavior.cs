@@ -1,10 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Flock/Behavior/Avoidance")]
+[CreateAssetMenu(menuName = "Flock/Behavior/Separation")]
 
-public class AvoidanceBehavior : FilteredFlockBehavior
+public class SeparationBehavior : FilteredFlockBehavior
 {
     //move away from your neighbors
     public override Vector3 CalculateMove(Boid boid, List<Transform> context, Flock flock)
@@ -14,21 +13,21 @@ public class AvoidanceBehavior : FilteredFlockBehavior
             return Vector3.zero;
 
         //add all points together and average
-        Vector3 avoidanceMove = Vector3.zero;
+        Vector3 separationMove = Vector3.zero;
         int nAvoid = 0;
         List<Transform> filteredContext = (filter == null) ? context : filter.Filter(boid, context);
         foreach (Transform item in filteredContext)
         {
             Vector3 closestPoint = item.gameObject.GetComponent<Collider>().ClosestPoint(boid.transform.position);
-            if (Vector3.SqrMagnitude(closestPoint - boid.transform.position) < flock.SquareAvoidanceRadius)
+            if (Vector3.SqrMagnitude(closestPoint - boid.transform.position) < flock.SquareSeparationRadius)
             {
                 nAvoid++;
-                avoidanceMove += boid.transform.position - closestPoint;
+                separationMove += boid.transform.position - closestPoint;
             }
         }
         if(nAvoid > 0)
-            avoidanceMove /= nAvoid;
+            separationMove /= nAvoid;
 
-        return avoidanceMove;
+        return separationMove;
     }
 }

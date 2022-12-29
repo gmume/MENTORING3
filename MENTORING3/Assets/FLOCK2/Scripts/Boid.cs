@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider))] //Adds a collider to the Boid
@@ -25,7 +23,7 @@ public class Boid : MonoBehaviour
 
     public void Move(Vector3 velocity)
     {
-        transform.up = velocity; //The Boid shoud move in direction head first
+        transform.up = velocity; //The Boid shoud move in direction head forward
         transform.position += velocity * Time.deltaTime;
     }
 }

@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,19 +18,19 @@ public class Flock : MonoBehaviour
     [Range(1f, 10f)]
     public float neightborRadius = 1.5f;
     [Range(0f, 1f)]
-    public float avoidanceRadiusMultiplier = 0.5f;
+    public float separationRadiusMultiplier = 0.5f;
 
     float squareMaxSpeed;
     float squareNeighborRadius;
-    float squareAvoidanceRadius;
-    public float SquareAvoidanceRadius { get { return squareAvoidanceRadius; } }
+    float squareSeparationRadius;
+    public float SquareSeparationRadius { get { return squareSeparationRadius; } }
 
     // Start is called before the first frame update
     void Start()
     {
         squareMaxSpeed = maxSpeed * maxSpeed;
         squareNeighborRadius = neightborRadius * neightborRadius;
-        squareAvoidanceRadius = squareNeighborRadius * avoidanceRadiusMultiplier * avoidanceRadiusMultiplier;
+        squareSeparationRadius = squareNeighborRadius * separationRadiusMultiplier * separationRadiusMultiplier;
 
         for (int i = 0; i < startingCount; i++)
         {
