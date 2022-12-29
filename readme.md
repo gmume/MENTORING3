@@ -74,3 +74,15 @@ When all rules are applied we allrady have some kind of flock.
   <source src="content\FLOCK2\05_ AllRules.mp4" type="video/mp4">
 </video>
 
+### Custom editor
+To be able to combine all elements of a boids behavior as simple as possible, I needed to write a custom editor for the inspector in Unity. Luckily the tutorial of Boards To Bits Games provided a video of how to do that. Unlucky was, that it doesn't work anymore on the newest versions of Unity. So I had to find a work around. In the end it looks like this:
+![Custom editor](content\FLOCK2\06_a_CustomEditor.png "Custom editor")
+Now it is easy to just add new elements to the flock create diffrent customized behaviors.
+
+### More than one flock
+What, if you would like to have more than one flock in the same area? For example one with red parrots and one with blue ones? To realize that every boid needs to know to which flock it belongs and to filter which of neighbors relevant. Here is how it looks like:
+<video width="480" height="320" controls="controls">
+  <source src="content\FLOCK2\08_a_TwoFlocks.mp4" type="video/mp4">
+</video>
+
+### Avoid obstacles
