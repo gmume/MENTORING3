@@ -86,3 +86,7 @@ What, if you would like to have more than one flock in the same area? For exampl
 </video>
 
 ### Avoid obstacles
+In a game level you usually want, that a flock doesn't fly right throu trees or any sort of that. So our flock needs to respect obstacles. To achiev this I used another filter, that sorts all objects out, that belong to certain leyer. In the video the orange flock avoids the obstacles, whilst the blue one doesn't.
+<video width="480" height="320" controls="controls">
+  <source src="content\FLOCK2\08_AvoidObstacles.mp4" type="video/mp4">
+</video>
