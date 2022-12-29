@@ -60,19 +60,18 @@ To get a flock like behavior, I needed to implement three rules that every boid 
   
 <video width="480" height="320" controls="controls">
   <source src="content\FLOCK2\03_Cohesion.mp4" type="video/mp4">
-  <p>In cohesion the boid tends to move to the middle of its neightbors.</p>
 </video>
+In cohesion the boid tends to move to the middle of its neightbors.
   
 <video width="480" height="320" controls="controls">
   <source src="content\FLOCK2\04_Avoidance.mp4" type="video/mp4">
-  <p>For the separation every boid avoids to be to near to any of its neighbors.</p>
 </video>
+For the separation every boid avoids to be to near to any of its neighbors.
 
 <video width="480" height="320" controls="controls">
   <source src="content\FLOCK2\05_ AllRules.mp4" type="video/mp4">
-  <p>And for alignment the boids tend to align their flight direction with that of their neighbors.<br>
-When all rules are applied we allrady have some kind of flock.</p>
 </video>
+And for alignment the boids tend to align their flight direction with that of their neighbors. When all rules are applied we allrady have some kind of flock.
 
 ### Custom editor
 To be able to combine all elements of a boids behavior as simple as possible, I needed to write a custom editor for the inspector in Unity. Luckily the tutorial of Boards To Bits Games provided a video of how to do that. Unlucky was, that it doesn't work anymore on the newest versions of Unity. So I had to find a work around. In the end it looks like this:
@@ -101,10 +100,10 @@ After taking care that the boids fly head first, I was quite happy with the resu
 Now I just needed to put a flock into the level of a game. But as always it isn't as easy as thought. I found, that the birds didn't spawned, where i wanted them to be.
 <video width="480" height="320" controls="controls">
   <source src="content\FLOCK2\12_SpawnPosition.mp4" type="video/mp4">
-  <p>Where are they? – There are they!</p>
 </video>
+Where are they? – There are they!
 
 <video width="480" height="320" controls="controls">
   <source src="content\FLOCK2\13_FlockInGame.mp4" type="video/mp4">
-  <p>Finally I was able to let them spawn where they should. Looks cool, doesn't it?</p>
 </video>
+Finally I was able to let them spawn where they should. Looks cool, doesn't it?
