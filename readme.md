@@ -96,3 +96,15 @@ After taking care that the boids fly head first, I was quite happy with the resu
 <video width="480" height="320" controls="controls">
   <source src="content\FLOCK2\11_HeadFirst.mp4" type="video/mp4">
 </video>
+
+### In the game
+Now I just needed to put a flock into the level of a game. But as always it isn't as easy as thought. I found, that the birds didn't spawned, where i wanted them to be.
+<video width="480" height="320" controls="controls">
+  <source src="content\FLOCK2\12_SpawnPosition.mp4" type="video/mp4">
+  <p>Where are they? – There are they!</p>
+</video>
+
+Finally I was able to let them spawn where they should. Looks cool, doesn't it?
+<video width="480" height="320" controls="controls">
+  <source src="content\FLOCK2\13_FlockInGame.mp4" type="video/mp4">
+</video>
