@@ -49,7 +49,7 @@ To create the flock I wrote a class Boid that takes a vector to move to the next
 
 public abstract class FlockBehavior : ScriptableObject  
 {  
-public abstract Vector3 CalculateMove(Boid boid, List<Transform> context, Flock flock);  
+public abstract Vector3 CalculateMove(Boid boid, List<Transform> context, Flock flock);
 }  
 
 When implementing the three rules of a flock every boid has to know about its neighbors. Therefore the flock class submits a list of nearby neightbor transforms to it. As a result we can see, that every boid is aware of its neightbors. In the picture the boids color turns more red the more of them it has.
