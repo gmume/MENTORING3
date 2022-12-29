@@ -58,20 +58,20 @@ When implementing the three rules of a flock every boid has to know about its ne
 ### The three rules
 To get a flock like behavior, I needed to implement three rules that every boid follows. These rules are called cohesion, separation and alignment.
   
-In cohesion the boid tends to move to the middle of its neightbors.
 <video width="480" height="320" controls="controls">
   <source src="content\FLOCK2\03_Cohesion.mp4" type="video/mp4">
+  <p>In cohesion the boid tends to move to the middle of its neightbors.</p>
 </video>
   
-For the separation every boid avoids to be to near to any of its neighbors.
 <video width="480" height="320" controls="controls">
   <source src="content\FLOCK2\04_Avoidance.mp4" type="video/mp4">
+  <p>For the separation every boid avoids to be to near to any of its neighbors.</p>
 </video>
 
-And for alignment the boids tend to align their flight direction with that of their neighbors.
-When all rules are applied we allrady have some kind of flock.
 <video width="480" height="320" controls="controls">
   <source src="content\FLOCK2\05_ AllRules.mp4" type="video/mp4">
+  <p>And for alignment the boids tend to align their flight direction with that of their neighbors.<br>
+When all rules are applied we allrady have some kind of flock.</p>
 </video>
 
 ### Custom editor
@@ -90,3 +90,8 @@ In a game level you usually want, that a flock doesn't fly right throu trees or 
 <video width="480" height="320" controls="controls">
   <source src="content\FLOCK2\08_AvoidObstacles.mp4" type="video/mp4">
 </video>
+
+### Flock
+After taking care that the boids fly head first, I was quite happy with the result. There are still some issues like boids trembling when they adjust their way or boids passing through objects, when they haven't enough space to avoid them because of their neighbors. But I think all over it works pretty well.
+{% raw %}
+<iframe src="content\FLOCK2\11_Flock2Build\MENTORING3.exe" width="100%" height="450" frameborder="no"></iframe> {% endraw %} [Full screen](content/FLOCK1/01_Flocking_p5)
