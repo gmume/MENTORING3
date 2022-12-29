@@ -48,7 +48,9 @@ Because of too many problems that weren't solvable for me, I decided not to try 
 To create the flock I wrote a class Boid that takes a vector to move to the next position. In the class Flock are all the boids handled and every element of the boids behavior will inherit from the scriptable object FlockBehavior.  
 
 public abstract class FlockBehavior : ScriptableObject  
-
+{  
+public abstract Vector3 CalculateMove(Boid boid, List<Transform> context, Flock flock);
+}  
 
 When implementing the three rules of a flock every boid has to know about its neighbors. Therefore the flock class submits a list of nearby neightbor transforms to it. As a result we can see, that every boid is aware of its neightbors. In the picture the boids color turns more red the more of them it has.
 ![Keeping track on neighbors](content\FLOCK2\02_KeepingTrackOnNeighbors.png "Keeping track on neighbors")
