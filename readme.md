@@ -97,3 +97,8 @@ Where are they? – There are they!
   <source src="content\FLOCK2\13_FlockInGame.mp4" type="video/mp4">
 </video>
 Finally I was able to let them spawn where they should. Looks cool, doesn't it?
+
+<video width="480" height="320" controls="controls">
+  <source src="content\FLOCK2\14_MosquitoSwarm.mp4" type="video/mp4">
+</video>
+If you add a wooble factor as a behavior object, you get some kind of mosquito swarm above a lake.
