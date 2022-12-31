@@ -360,6 +360,7 @@
 "Assets/FLOCK2/Scripts/BehaviorScripts/SeparationBehavior.cs"
 "Assets/FLOCK2/Scripts/BehaviorScripts/StayInRadiusBehavior.cs"
 "Assets/FLOCK2/Scripts/BehaviorScripts/SteeredCohesionBehavior.cs"
+"Assets/FLOCK2/Scripts/BehaviorScripts/WobblyMove.cs"
 "Assets/FLOCK2/Scripts/Boid.cs"
 "Assets/FLOCK2/Scripts/ContextFilter.cs"
 "Assets/FLOCK2/Scripts/FilteredFlockBehavior.cs"

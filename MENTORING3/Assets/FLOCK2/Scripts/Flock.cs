@@ -4,12 +4,12 @@ using UnityEngine;
 public class Flock : MonoBehaviour
 {
     public Boid boidPrefab;
-    List<Boid> boids = new();
+    readonly List<Boid> boids = new();
     public FlockBehavior behavior;
 
     [Range(10, 500)]
     public int startingCount = 250;
-    const float BoidDensity = 0.08f;
+    const float BoidDensity = 0.8f;
 
     [Range(1f, 100f)]
     public float driveFactor = 10f;
@@ -36,7 +36,7 @@ public class Flock : MonoBehaviour
         {
             Boid newBoid = Instantiate(
                 boidPrefab,
-                Random.insideUnitCircle * startingCount * BoidDensity,
+                transform.position + Random.insideUnitSphere * startingCount * BoidDensity,
                 Quaternion.Euler(Vector3.forward * Random.Range(0f, 360f)),
                 transform
                 );
