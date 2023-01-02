@@ -61,7 +61,7 @@ For the separation every boid avoids to be to near to any of its neighbors.
 <video width="480" height="320" controls="controls">
   <source src="content\FLOCK2\05_ AllRules.mp4" type="video/mp4">
 </video>
-And for alignment the boids tend to align their flight direction with that of their neighbors. When all rules are applied we allrady have some kind of flock.  
+And for alignment the boids tend to align their flight direction with that of their neighbors. When all rules are applied we allready have some kind of flock.  
 
 ### Custom editor
 To be able to combine all elements of a boids behavior as simple as possible, I needed to write a custom editor for the inspector in Unity. Luckily the tutorial of Boards To Bits Games provided a video of how to do that. Unlucky was, that it doesn't work anymore on the newest versions of Unity. So I had to find a work around. In the end it looks like this:
@@ -69,13 +69,13 @@ To be able to combine all elements of a boids behavior as simple as possible, I 
 Now it is easy to just add new elements to the flock create diffrent customized behaviors.  
 
 ### More than one flock
-What, if you would like to have more than one flock in the same area? For example one with red parrots and one with blue ones? To realize that every boid needs to know to which flock it belongs and to filter which of neighbors relevant. Here is how it looks like:
+What, if you would like to have more than one flock in the same area? For example one with red parrots and one with blue ones? To realize that every boid needs to know to which flock it belongs and to filter which of the neighbors are relevant. Here is how it looks like:
 <video width="480" height="320" controls="controls">
   <source src="content\FLOCK2\08_a_TwoFlocks.mp4" type="video/mp4">
 </video>  
 
 ### Avoid obstacles
-In a game level you usually want, that a flock doesn't fly right throu trees or any sort of that. So our flock needs to respect obstacles. To achiev this I used another filter, that sorts all objects out, that belong to certain leyer. In the video the orange flock avoids the obstacles, whilst the blue one doesn't.
+In a game level you usually want, that a flock doesn't fly right through trees or any sort of that. So our flock needs to respect obstacles. To achieve this I used another filter, that sorts all objects out, that belong to a certain layer. In the video the orange flock avoids the obstacles, whilst the blue one doesn't.
 <video width="480" height="320" controls="controls">
   <source src="content\FLOCK2\08_AvoidObstacles.mp4" type="video/mp4">
 </video>  
@@ -87,7 +87,7 @@ After taking care that the boids fly head first, I was quite happy with the resu
 </video>  
 
 ### In the game
-Now I just needed to put a flock into the level of a game. But as always it isn't as easy as thought. I found, that the birds didn't spawned, where i wanted them to be.
+Now I just needed to put a flock into the level of a game. But as always it isn't as easy as thought. I found, that the birds didn't spawn, where I wanted them to be.
 <video width="480" height="320" controls="controls">
   <source src="content\FLOCK2\12_SpawnPosition.mp4" type="video/mp4">
 </video>
@@ -101,4 +101,4 @@ Finally I was able to let them spawn where they should. Looks cool, doesn't it?
 <video width="480" height="320" controls="controls">
   <source src="content\FLOCK2\14_MosquitoSwarm.mp4" type="video/mp4">
 </video>
-If you add a wooble factor as a behavior object, you get some kind of mosquito swarm above a lake.
+If you add a wobble factor as a behavior object, you get some kind of mosquito swarm above a lake.
