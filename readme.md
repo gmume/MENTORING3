@@ -70,7 +70,7 @@ Now it is easy to just add new elements to the flock create diffrent customized 
 
 ### More than one flock
 What, if you would like to have more than one flock in the same area? For example one with red parrots and one with blue ones? To realize that every boid needs to know to which flock it belongs and to filter which of the neighbors are relevant. Here is how it looks like:
-<video width="480" height="320" controls="controls">
+<video width=window.innerHeight height="" controls="controls">
   <source src="content\FLOCK2\08_a_TwoFlocks.mp4" type="video/mp4">
 </video>  
 
