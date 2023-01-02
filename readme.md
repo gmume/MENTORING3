@@ -50,7 +50,7 @@ When implementing the three rules of a flock every boid has to know about its ne
 
 ### The three rules
 To get a flock like behavior, I needed to implement three rules that every boid follows. These rules are called cohesion, separation and alignment.
-<video width="480" height="320" controls="controls">
+<video width="100%" height="100%" controls="controls">
   <source src="content\FLOCK2\03_Cohesion.mp4" type="video/mp4">
 </video>
 In cohesion the boid tends to move to the middle of its neightbors.
