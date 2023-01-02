@@ -19,7 +19,7 @@ For this project I wanted to do version control with GitHub and use GitHub pages
 Before taking action myselfe I wanted to dig deeper into what creative coding actually is. I found an informative page, that shows many examples of what creative software can do.  
 [THE POSSIBILITIES OF CREATIVE CODING](https://eindhoven.makerfaire.com/wp-content/uploads/sites/174/2020/08/Possibilities-of-Creative-Coding.pdf)
 
-After a good talk with Dragica Kahlina, a lecturer at the HSLU, I decided to challange myselfe with building an AI that simulates a flock of birds. Therefore I researched the rules of a flock as they were phrased by Craig Reynolds. Here is, how an early implementation (1986) from C. Rynolds worked:  
+After a good talk with Dragica Kahlina, a lecturer at the HSLU, I decided to challange myselfe with building an AI that simulates a flock of birds. Therefore I researched the rules of a flock as they were phrased by Craig Reynolds, an artificial life and computer graphics expert. Here is, how an early implementation (1986) from C. Rynolds worked:  
 [Craig Reynolds - Original 1986 Boids simulation](https://www.youtube.com/watch?v=86iQiV3-3IA)  
 
 ### First flock in p5.js
