@@ -45,12 +45,14 @@ Because of too many problems that weren't solvable for me, I decided not to try 
 
 ### Creating boids
 To create the flock I wrote a class Boid that takes a vector to move to the next position. In the class Flock are all the boids handled and every element of the boids behavior will inherit from the scriptable object FlockBehavior. 
-
-![Scriptable object](content\FLOCK2\03_a_ScriptableObject.png "Scriptable object")
+<p>
+  ![Scriptable object](content\FLOCK2\03_a_ScriptableObject.png "Scriptable object")
+</p>
 
 When implementing the three rules of a flock every boid has to know about its neighbors. Therefore the flock class submits a list of nearby neightbor transforms to it. As a result we can see, that every boid is aware of its neightbors. In the picture the boids color turns more red the more of them it has.
-
-![Keeping track on neighbors](content\FLOCK2\02_KeepingTrackOnNeighbors.png "Keeping track on neighbors")
+<p>
+  ![Keeping track on neighbors](content\FLOCK2\02_KeepingTrackOnNeighbors.png "Keeping track on neighbors")
+</p>
 
 ### The three rules
 To get a flock like behavior, I needed to implement three rules that every boid follows. These rules are called cohesion, separation and alignment.
@@ -71,8 +73,9 @@ And for alignment the boids tend to align their flight direction with that of th
 
 ### Custom editor
 To be able to combine all elements of a boids behavior as simple as possible, I needed to write a custom editor for the inspector in Unity. Luckily the tutorial of Boards To Bits Games provided a video of how to do that. Unlucky was, that it doesn't work anymore on the newest versions of Unity. So I had to find a work around. In the end it looks like this:
-
-![Custom editor](content\FLOCK2\06_a_CustomEditor.png "Custom editor")
+<p>
+  ![Custom editor](content\FLOCK2\06_a_CustomEditor.png "Custom editor")
+</p>
 
 Now it is easy to just add new elements to the flock create diffrent customized behaviors.  
 
