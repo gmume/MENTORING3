@@ -3,11 +3,11 @@
 ## Creative coding with Unity
 
 #### September 2022
-### My first mentoring at the HSLU
-Hi, I'm a student of the HSLU and study IT and Design. On this site I will document the progress of my mentorting in the semester of fall 2022, in which I'm exploring how to use unity for creative or generative coding. In a discussion with my mentor Guillaume Massol I decided on four goals:
+### My first mentorship at the HSLU
+Hi, I'm a student of the HSLU and study IT and Design. On this site I will document the progress of my mentorship in the semester of fall 2022, in which I'm exploring how to use unity for creative or generative coding. In a discussion with my mentor Guillaume Massol I decided on four goals:
 
 1. Get familiar with Unity and Github
-2. Challange yourself with little projects
+2. Challenge yourself with little projects
 3. Get faster with coding
 4. Document the process on Github  
 
@@ -112,3 +112,22 @@ Finally I was able to let them spawn where they should. Looks cool, doesn't it?
 </video>
 
 If you add a wobble factor as a behavior object, you get some kind of mosquito swarm above a lake.
+
+#### January
+### Summary
+Finally it's the end of the semester and because of that it is also the end of my mentorship. Now it's time to look back.
+In the beginning there were my four goals:  
+
+1. Get familiar with Unity and Github
+2. Challenge yourself with little projects
+3. Get faster with coding
+4. Document the process on Github
+  
+I was exited about the thought of: "I'm gonna get so much creative code done and achive real cool stuff!" Well, I did. It just wasn't as much as I thought it would be.
+Most of the time was used for goal 1 "Get familiar with Unity and Github" and goal 2 "Document the process on Github". It took me ages to figure out how to set up a Github repo in combination with Unity for the code and Jekyll for the documentation on the Github webpage.  
+In the end I could challenge myself only with the implementation of a flock. Because i thought it would be possible to create a prototype in p5.js and adapt that piece of code for Unity I wasted much of the time on this attempt. Lesson learned: Don't do that! It isn't like adapting code for example from java to java script. If you want something to happen in Unity, implement it there from the beginning!  
+In the process of trial an error I noticed for myself that I in fact got faster at coding. So I think I achived that goal.  
+All in all a huge deal of the time I invested for the project I was failing and it was frustrating. But in the end I am mostly proud that I could get the flock to work fine.  
+Finally I want to thank Dragica Kahlina for giving me lots of inspiration and helping me to decide on implementing a flock and my mentor Guillaume Massol for discussing the progress from time to time and helping with planning fruther work.  
+
+I hope you enjoyed reading about my mentorship. If you ever have the chance to get one yourself, I can only recommend it to you. Even though it is sometimes hard to work just by yourself, you will learn a ton by that. So just give it a shoot!
