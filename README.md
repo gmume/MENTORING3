@@ -130,4 +130,4 @@ In the process of trial an error I noticed for myself that I in fact got faster 
 All in all a huge deal of the time I invested for the project I was failing and it was frustrating. But in the end I am mostly proud that I could get the flock to work fine.  
 Finally I want to thank Dragica Kahlina for giving me lots of inspiration and helping me to decide on implementing a flock and my mentor Guillaume Massol for discussing the progress from time to time and helping with planning further work.  
 
-I hope you enjoyed reading about my mentorship. If you ever have the chance to get one yourself, I can only recommend it to you. Even though it is sometimes hard to work just by yourself, you will learn a ton by that. So just give it a shoot!
+I hope you enjoyed reading about my mentorship. If you ever have the chance to get one yourself, I can only recommend it to you. Even though it is sometimes hard to work just by yourself, you will learn a ton by that. So just give it a shot!
