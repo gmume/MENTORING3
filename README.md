@@ -16,10 +16,10 @@ Hi, I'm a student of the HSLU and study IT and Design. On this site I will docum
 For this project I wanted to do version control with GitHub and use GitHub pages with a Jekyll theme to show the documentation. I have to mention here, that I'm not familiar with both of them. When I started a month ago, I thought, that this would be simple. Guess what? It wasn't! I'm new to Unity, GitHub and Jekyll and I got the impression, that there are a thousend ways to get the three of them working together. And belive me, I wrecked them all! I tried to set it up with Git Bash, cmd, Git Desktop and GitHub remote. I used many diffrent versions of gemfiles, .gitignores and tried out a bunch of Jekyll themes. Sometimes I was angry and desperate and often deleted the whole thing just to restart again. But here I am, the page is up and working and I'm finally ready to go. Whoop, whoop!  
 
 ### Research
-Before taking action myselfe I wanted to dig deeper into what creative coding actually is. I found an informative page, that shows many examples of what creative software can do.  
+Before taking action myself I wanted to dig deeper into what creative coding actually is. I found an informative page, that shows many examples of what creative software can do.  
 [THE POSSIBILITIES OF CREATIVE CODING](https://eindhoven.makerfaire.com/wp-content/uploads/sites/174/2020/08/Possibilities-of-Creative-Coding.pdf)
 
-After a good talk with Dragica Kahlina, a lecturer at the HSLU, I decided to challange myselfe with building an AI that simulates a flock of birds. Therefore I researched the rules of a flock as they were phrased by Craig Reynolds, an artificial life and computer graphics expert. Here is, how an early implementation (1986) from C. Rynolds worked:  
+After a good talk with Dragica Kahlina, a lecturer at the HSLU, I decided to challenge myself with building an AI that simulates a flock of birds. Therefore I researched the rules of a flock as they were phrased by Craig Reynolds, an artificial life and computer graphics expert. Here is, how an early implementation (1986) from C. Rynolds worked:  
 [Craig Reynolds - Original 1986 Boids simulation](https://www.youtube.com/watch?v=86iQiV3-3IA)  
 
 ### First flock in p5.js
@@ -125,9 +125,9 @@ In the beginning there were my four goals:
   
 I was exited about the thought of: "I'm gonna get so much creative code done and achive real cool stuff!" Well, I did. It just wasn't as much as I thought it would be.
 Most of the time was used for goal 1 "Get familiar with Unity and Github" and goal 2 "Document the process on Github". It took me ages to figure out how to set up a Github repo in combination with Unity for the code and Jekyll for the documentation on the Github webpage.  
-In the end I could challenge myself only with the implementation of a flock. Because i thought it would be possible to create a prototype in p5.js and adapt that piece of code for Unity I wasted much of the time on this attempt. Lesson learned: Don't do that! It isn't like adapting code for example from java to java script. If you want something to happen in Unity, implement it there from the beginning!  
+In the end I could challenge myself only with the implementation of a flock. Because I thought it would be possible to create a prototype in p5.js and adapt that piece of code for Unity I wasted much of the time on this attempt. Lesson learned: Don't do that! It isn't like adapting code for example from java to java script. If you want something to happen in Unity, implement it there from the beginning!  
 In the process of trial an error I noticed for myself that I in fact got faster at coding. So I think I achived that goal.  
 All in all a huge deal of the time I invested for the project I was failing and it was frustrating. But in the end I am mostly proud that I could get the flock to work fine.  
-Finally I want to thank Dragica Kahlina for giving me lots of inspiration and helping me to decide on implementing a flock and my mentor Guillaume Massol for discussing the progress from time to time and helping with planning fruther work.  
+Finally I want to thank Dragica Kahlina for giving me lots of inspiration and helping me to decide on implementing a flock and my mentor Guillaume Massol for discussing the progress from time to time and helping with planning further work.  
 
 I hope you enjoyed reading about my mentorship. If you ever have the chance to get one yourself, I can only recommend it to you. Even though it is sometimes hard to work just by yourself, you will learn a ton by that. So just give it a shoot!
