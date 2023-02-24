@@ -3,11 +3,13 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - AlignmentBehavior
     - Boid
+    - BoolVariable
     - CompositeBehavior
     - Flock
     - PhysicsLayerFilter
     - SameFlockFilter
     - SeparationBehavior
+    - SpawnPoint
     - StayInRadiusBehavior
     - SteeredCohesionBehavior
     Unity.Rider.Editor.dll:
@@ -19,7 +21,7 @@ ScriptsOnlyBuild:
   serializedClasses: {}
   methodsToPreserve: []
   sceneClasses:
-    Assets/Scenes/Flock2.unity:
+    Assets/Flock/Scene/FlockScene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -53,19 +55,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2742}
     - Class: 114
-      Script: {instanceID: 5722}
+      Script: {instanceID: 5134}
+    - Class: 114
+      Script: {instanceID: 5724}
     - Class: 114
       Script: {instanceID: 6430}
     - Class: 114
-      Script: {instanceID: 6798}
+      Script: {instanceID: 6800}
     - Class: 114
-      Script: {instanceID: 7090}
+      Script: {instanceID: 7092}
     - Class: 114
-      Script: {instanceID: 7316}
+      Script: {instanceID: 7152}
     - Class: 114
-      Script: {instanceID: 7494}
+      Script: {instanceID: 7320}
     - Class: 114
-      Script: {instanceID: 8322}
+      Script: {instanceID: 7498}
+    - Class: 114
+      Script: {instanceID: 8324}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -551,6 +557,12 @@ ScriptsOnlyBuild:
     className: Toggle
   - hash:
       serializedVersion: 2
+      Hash: 4ae3ba07b9db122d5e22b58eebe39f48
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpawnPoint
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -648,12 +660,6 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Boid1
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseUpAsButtonMessageListener
@@ -687,6 +693,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SteeredCohesionBehavior
+  - hash:
+      serializedVersion: 2
+      Hash: 84023ae7039d96d7dea12e6ece676e43
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WobblyMove
   - hash:
       serializedVersion: 2
       Hash: 8e6ceabfd38a184413d69b7db56c89cc
@@ -785,6 +797,12 @@ ScriptsOnlyBuild:
     className: UnityOnScrollRectValueChangedMessageListener
   - hash:
       serializedVersion: 2
+      Hash: ba1e27eaab7a2fedd4df00611f551aeb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BoolVariable
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -869,12 +887,6 @@ ScriptsOnlyBuild:
     className: StateMachine
   - hash:
       serializedVersion: 2
-      Hash: b3f947f618b2e6c07d1bb6b22e2b955c
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Flock1
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -923,5 +935,5 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   platform: 19
   scenePathNames:
-  - Assets/Scenes/Flock2.unity
-  playerPath: C:/Users/phace/Documents/HSLU/3_MEN3/Builds/MENTORING3.exe
+  - Assets/Flock/Scene/FlockScene.unity
+  playerPath: C:/Users/phace/Documents/HSLU/3_MEN3/Builds/20230128_FlockFinal/MENTORING3.exe

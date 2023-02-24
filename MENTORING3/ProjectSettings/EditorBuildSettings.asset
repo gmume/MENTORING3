@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Flock2.unity
-    guid: acd906037df8c0041954672053af71fc
+    path: Assets/Flock/Scene/FlockScene.unity
+    guid: 95adef8b1918cbc4dac0bdaf24386c68
   m_configObjects: {}
